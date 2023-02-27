@@ -1,0 +1,43 @@
+﻿@page "/clientsoverview"
+
+@if (Clients == null)
+{
+    <div class="center-screen">
+        <p><em>Loading...</em></p>
+    </div>
+}
+else
+{
+    <ClientUpdateWindow Client="_selectedClient" OnClose="UpdatePostCodes"></ClientUpdateWindow>
+    <div class="table-title">
+        <h2>Clients List</h2>
+        <div class="align-right">
+            <button type="button" class="btn btn-primary" @onclick="ImportClientsAsync">Import Clients</button>
+        </div>
+    </div>
+    <table class="table table-light">
+        <thead class="table-primary">
+            <tr>
+                <th>Client Name</th>
+                <th>Client Address</th>
+                <th>Client Post Code</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var client in Clients)
+            {
+                <tr>
+                    <td>@client.Name</td>
+                    <td>@client.Address</td>
+                    <td>@client.PostCode</td>
+                    <td>
+                        <button class="btn btn-primary" @onclick="@( () => ShowClientUpdateWindow(client))">
+                            Edit
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

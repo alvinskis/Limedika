@@ -1,0 +1,19 @@
+﻿.center-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.table-title {
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.align-right {
+    margin-left: auto;
+    align-items: center;
+}

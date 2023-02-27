@@ -1,0 +1,34 @@
+﻿@if (_client != null)
+{
+    <div class="modal fade show d-block" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">@Client?.Name</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="col row">
+                        <div class="col-12 col-sm-8">
+                            <div class="form-group row">
+                                <label class="col-sm-5 col-form-label">Address</label>
+                                <div class="col-sm-7">
+                                    <label typeof="text" class="form-control-plaintext">@Client?.Address</label>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-5 col-form-label">Post Code</label>
+                                <div class="col-sm-7">
+                                    <label typeof="text" class="form-control-plaintext">@Client?.PostCode</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" @onclick="CloseWindow">Close</button>
+                    <button type="button" class="btn btn-primary" @onclick="@(() => UpdatePostCodeByAddressAsync(Client))">Update Post Code</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}

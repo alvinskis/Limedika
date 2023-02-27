@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "e4JfLQtXrpYwpUioocEtpMgiE5zEe0CHOK8TaYUhc3XVB+gFysC78ntYNaGBozwZMVDNXbrGehqV4pomLJg0TQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Modestas.Alvinskis\\OneDrive - Euromonitor International\\Trainings\\Projects\\Limedika\\LimedikaWebApp\\src\\Application\\Application.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://nuget.episerver.com/feed/packages.svc/'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}
